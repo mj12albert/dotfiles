@@ -1,0 +1,6 @@
+# If Bash 4.0 is available, trim very long paths in prompt
+if ((${BASH_VERSINFO[0]} >= 4)); then
+    PROMPT_DIRTRIM=2
+fi
+
+PS1="\[\033[30m\][ \$(/bin/date +"%Y-%b-%d") \t ][ @\h ][ \w ]\[\033[m\]\n\[\033[36m\]\u\[\033[m\] $ "
