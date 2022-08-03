@@ -37,9 +37,11 @@ if [[ -d $HOME/.bashrc.d ]]; then
 fi
 unset -v config
 
-# Homebrew Github API token
-export HOMEBREW_GITHUB_API_TOKEN=92780a9931725778f271feb7479b26cd8e3cc089
-
+# nvm
+export NVM_SYMLINK_CURRENT=true
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# PATH
+export PATH="$HOME/.nvm/current/bin/:$PATH"
